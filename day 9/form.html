@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="form">
+
+        <h1>this is your form 😊</h1>
+        <form action="">
+            <label for="name">UserName</label><br>
+            <input type="text" placeholder="enter your name " id="name">
+            <br>
+            <label for="age">Age</label><br>
+            <input type="number" id="age">
+            <br>
+            <label for="">Password :-</label><br>
+            <input type="password" id="password">
+            <br>
+            <label for="">ConfirmPassword</label><br>
+            <input type="text" id="cnfpassword"><br>
+            <button onclick="handlesubmit()" style="cursor: pointer;">submit</button>
+        </form>
+        <script>
+            const handlesubmit=()=>{
+                const UserName=document.getElementById("name").value
+                const password =document.getElementById("password").value
+                const cnfpassword = document.getElementById("cnfpassword").value
+                
+                if(UserName == "" || password == "" || cnfpassword =="" ){
+                    window.alert("please enter the required field")
+                    return
+                }
+                if(password.length<8){
+                    window.alert("please enter a strong password")
+                    return
+                }
+                if(password!=cnfpassword){
+                    window.alert("password do not match")
+                    return
+                }
+                else{
+                    window.alert("registration succesful")
+                }
+            }
+        </script>
+    </div>
+    </body>
+</html>

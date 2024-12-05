@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cheakage" style="margin-top: 180px;">
+        <center>
+
+            <h1 id="check">enter your age</h1>
+            <button onclick="cheakage()">check your age</button>
+        </center>
+    </div>
+    <script>
+        const cheakage=()=>{
+            let age = window.prompt("please enter your age:");
+            let check = document.getElementById("check");
+            if(age>=18){
+                check.innerHTML = "you are eligible to vote"
+
+            }else{
+                check.innerHTML = "you are not eligible to vote"
+            }
+        }
+
+    </script>
+</body>
+</html>
